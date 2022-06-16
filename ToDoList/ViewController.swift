@@ -80,7 +80,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         do {
             models = try context.fetch(ToDoListItem.fetchRequest())
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self.tableView?.reloadData()
             }
         } catch {
 //            Error
