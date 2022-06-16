@@ -16,8 +16,25 @@ class NewTaskController: UIViewController {
     @IBOutlet weak var descField: UITextView!
     
     @IBAction func submit(_ sender: Any) {
-        table.createItem(title: titleField.text!, subtitle: subtitleField.text!, desc: descField.text!)
-        navigationController?.popViewController(animated: true)
+        if(titleField.text == "" || subtitleField.text == "" || descField.text == "") {
+            // Create new Alert
+            let dialogMessage = UIAlertController(title: "Alert", message: "Invalid input", preferredStyle: .alert)
+            
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                print("Ok button tapped")
+             })
+            
+            //Add OK button to a dialog message
+            dialogMessage.addAction(ok)
+            
+            // Present Alert to
+            self.present(dialogMessage, animated: true, completion: nil)
+        } else {
+            table.createItem(title: titleField.text!, subtitle: subtitleField.text!, desc: descField.text!)
+            navigationController?.popViewController(animated: true)
+        }
+
     }
     
     override func viewDidLoad() {
