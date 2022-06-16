@@ -14,48 +14,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     
-    //    var tableView: UITableView = {
-//        let table = UITableView()
-//        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-//
-//        return table
-//    }()
-    
     private var models = [ToDoListItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "To Do List"
-//        view.addSubview(tableView)
-//        getAllItems()
         tableView.delegate = self
         tableView.dataSource = self
-//        tableView.frame = view.bounds
-        
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
     }
-    
-//    @objc private func didTapAdd() {
-//        let alert = UIAlertController(
-//            title: "New Item", message: "Enter new item", preferredStyle: .alert
-//        )
-//        alert.addTextField(configurationHandler: nil)
-//        alert.addAction(UIAlertAction(
-//            title: "Submit",
-//            style: .cancel,
-//            handler: {
-//                [weak self] _ in
-//                guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else {
-//                    return
-//                }
-//            self?.createItem(
-//                title: text,
-//                subtitle: "a",
-//                desc: "a"
-//            )
-//        }))
-//        present(alert, animated: true)
-//    }
     
     override func viewWillAppear(_ animated: Bool) {
         getAllItems()
@@ -68,10 +34,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CellTableView
-//        cell.textLabel?.text = model.title
         cell?.titleLabel.text  = model.title
         cell?.subtitleLabel.text  = model.subtitle
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
+            -> UISwipeActionsConfiguration? {
+            let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
+                // delete the item here
+                let item = self.models[indexPath.row]
+                self.deleteItem(item: item)
+                tableView.reloadData()
+                completionHandler(true)
+            }
+            deleteAction.image = UIImage(systemName: "trash")
+            deleteAction.backgroundColor = .systemRed
+            let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+            return configuration
     }
     
 //    Core Data
@@ -95,7 +75,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             try context.save()
-            getAllItems()
         } catch {
 //            Error
         }

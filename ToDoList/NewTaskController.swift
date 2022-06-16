@@ -10,7 +10,7 @@ import UIKit
 class NewTaskController: UIViewController {
     
     var table = ViewController()
-    
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var subtitleField: UITextField!
     @IBOutlet weak var descField: UITextView!
@@ -22,7 +22,7 @@ class NewTaskController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        submitButton.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
     
