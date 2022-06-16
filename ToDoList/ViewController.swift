@@ -85,6 +85,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             try context.save()
+            getAllItems()
         } catch {
 //            Error
         }
