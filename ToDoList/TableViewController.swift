@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -52,6 +52,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             deleteAction.backgroundColor = .systemRed
             let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
             return configuration
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newTask" {
+          // .. do somtheing
+        } else if segue.identifier == "editTask" {
+            if let destination = segue.destination as? NewTaskController {
+                destination.model = models[(tableView.indexPathForSelectedRow?.row)!]
+            }
+        }
+
     }
     
 //    Core Data

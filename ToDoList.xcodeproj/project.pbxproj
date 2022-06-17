@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0575D8285C5AB900AEB34F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0575D7285C5AB900AEB34F /* DetailViewController.swift */; };
 		7BCE63E8285AFD7B005AAD24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE63E7285AFD7B005AAD24 /* AppDelegate.swift */; };
 		7BCE63EA285AFD7B005AAD24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE63E9285AFD7B005AAD24 /* SceneDelegate.swift */; };
-		7BCE63EC285AFD7B005AAD24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE63EB285AFD7B005AAD24 /* ViewController.swift */; };
+		7BCE63EC285AFD7B005AAD24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE63EB285AFD7B005AAD24 /* TableViewController.swift */; };
 		7BCE63EF285AFD7B005AAD24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCE63ED285AFD7B005AAD24 /* Main.storyboard */; };
 		7BCE63F2285AFD7B005AAD24 /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE63F0285AFD7B005AAD24 /* ToDoList.xcdatamodeld */; };
 		7BCE63F4285AFD7E005AAD24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCE63F3285AFD7E005AAD24 /* Assets.xcassets */; };
@@ -21,10 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B0575D7285C5AB900AEB34F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7BCE63E4285AFD7B005AAD24 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCE63E7285AFD7B005AAD24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCE63E9285AFD7B005AAD24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7BCE63EB285AFD7B005AAD24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BCE63EB285AFD7B005AAD24 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7BCE63EE285AFD7B005AAD24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BCE63F1285AFD7B005AAD24 /* ToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoList.xcdatamodel; sourceTree = "<group>"; };
 		7BCE63F3285AFD7E005AAD24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,8 +71,9 @@
 				7BCE640E285B0030005AAD24 /* ToDoListItem */,
 				7BCE63E7285AFD7B005AAD24 /* AppDelegate.swift */,
 				7BCE63E9285AFD7B005AAD24 /* SceneDelegate.swift */,
-				7BCE63EB285AFD7B005AAD24 /* ViewController.swift */,
+				7BCE63EB285AFD7B005AAD24 /* TableViewController.swift */,
 				7BCE63ED285AFD7B005AAD24 /* Main.storyboard */,
+				7B0575D7285C5AB900AEB34F /* DetailViewController.swift */,
 				7BCE6411285B2DA3005AAD24 /* CellTableView.swift */,
 				7BCE640F285B0EFC005AAD24 /* NewTaskController.swift */,
 				7BCE63F3285AFD7E005AAD24 /* Assets.xcassets */,
@@ -161,7 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BCE63EC285AFD7B005AAD24 /* ViewController.swift in Sources */,
+				7B0575D8285C5AB900AEB34F /* DetailViewController.swift in Sources */,
+				7BCE63EC285AFD7B005AAD24 /* TableViewController.swift in Sources */,
 				7BCE6412285B2DA3005AAD24 /* CellTableView.swift in Sources */,
 				7BCE63E8285AFD7B005AAD24 /* AppDelegate.swift in Sources */,
 				7BCE63EA285AFD7B005AAD24 /* SceneDelegate.swift in Sources */,

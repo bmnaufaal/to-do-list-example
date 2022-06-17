@@ -9,13 +9,16 @@ import UIKit
 
 class NewTaskController: UIViewController {
     
-    var table = ViewController()
+    var table = TableViewController()
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var subtitleField: UITextField!
     @IBOutlet weak var descField: UITextView!
+    var model : ToDoListItem?
+    
     
     @IBAction func submit(_ sender: Any) {
+        
         if(titleField.text == "" || subtitleField.text == "" || descField.text == "") {
             // Create new Alert
             let dialogMessage = UIAlertController(title: "Alert", message: "Invalid input", preferredStyle: .alert)
@@ -31,15 +34,30 @@ class NewTaskController: UIViewController {
             // Present Alert to
             self.present(dialogMessage, animated: true, completion: nil)
         } else {
-            table.createItem(title: titleField.text!, subtitle: subtitleField.text!, desc: descField.text!)
-            navigationController?.popViewController(animated: true)
+            
+                if let modelA = model {
+                    table.updateItem(item: modelA, newTitle: titleField.text!, newSubTitle: subtitleField.text!, newDesc: descField.text!)
+                    navigationController?.popViewController(animated: true)
+                }else {
+                    table.createItem(title: titleField.text!, subtitle: subtitleField.text!, desc: descField.text!)
+                    navigationController?.popViewController(animated: true)
+                }
         }
 
     }
     
     override func viewDidLoad() {
+        if (model != nil) {
+            title = "Edit Data"
+            titleField.text = model?.title
+            subtitleField.text = model?.subtitle
+            descField.text = model?.desc
+        }
         super.viewDidLoad()
         submitButton.layer.cornerRadius = 5
+       
+       
+        
         // Do any additional setup after loading the view.
     }
     
