@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B0575D8285C5AB900AEB34F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0575D7285C5AB900AEB34F /* DetailViewController.swift */; };
 		7BCE63E8285AFD7B005AAD24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE63E7285AFD7B005AAD24 /* AppDelegate.swift */; };
 		7BCE63EA285AFD7B005AAD24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE63E9285AFD7B005AAD24 /* SceneDelegate.swift */; };
 		7BCE63EC285AFD7B005AAD24 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE63EB285AFD7B005AAD24 /* TableViewController.swift */; };
@@ -17,12 +16,11 @@
 		7BCE63F7285AFD7E005AAD24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCE63F5285AFD7E005AAD24 /* LaunchScreen.storyboard */; };
 		7BCE640C285B0023005AAD24 /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE640A285B0023005AAD24 /* ToDoListItem+CoreDataClass.swift */; };
 		7BCE640D285B0023005AAD24 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE640B285B0023005AAD24 /* ToDoListItem+CoreDataProperties.swift */; };
-		7BCE6410285B0EFC005AAD24 /* NewTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE640F285B0EFC005AAD24 /* NewTaskController.swift */; };
+		7BCE6410285B0EFC005AAD24 /* DetailTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE640F285B0EFC005AAD24 /* DetailTaskController.swift */; };
 		7BCE6412285B2DA3005AAD24 /* CellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE6411285B2DA3005AAD24 /* CellTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B0575D7285C5AB900AEB34F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7BCE63E4285AFD7B005AAD24 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCE63E7285AFD7B005AAD24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCE63E9285AFD7B005AAD24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +32,7 @@
 		7BCE63F8285AFD7E005AAD24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BCE640A285B0023005AAD24 /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7BCE640B285B0023005AAD24 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7BCE640F285B0EFC005AAD24 /* NewTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskController.swift; sourceTree = "<group>"; };
+		7BCE640F285B0EFC005AAD24 /* DetailTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskController.swift; sourceTree = "<group>"; };
 		7BCE6411285B2DA3005AAD24 /* CellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,9 +71,8 @@
 				7BCE63E9285AFD7B005AAD24 /* SceneDelegate.swift */,
 				7BCE63EB285AFD7B005AAD24 /* TableViewController.swift */,
 				7BCE63ED285AFD7B005AAD24 /* Main.storyboard */,
-				7B0575D7285C5AB900AEB34F /* DetailViewController.swift */,
 				7BCE6411285B2DA3005AAD24 /* CellTableView.swift */,
-				7BCE640F285B0EFC005AAD24 /* NewTaskController.swift */,
+				7BCE640F285B0EFC005AAD24 /* DetailTaskController.swift */,
 				7BCE63F3285AFD7E005AAD24 /* Assets.xcassets */,
 				7BCE63F5285AFD7E005AAD24 /* LaunchScreen.storyboard */,
 				7BCE63F8285AFD7E005AAD24 /* Info.plist */,
@@ -164,12 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B0575D8285C5AB900AEB34F /* DetailViewController.swift in Sources */,
 				7BCE63EC285AFD7B005AAD24 /* TableViewController.swift in Sources */,
 				7BCE6412285B2DA3005AAD24 /* CellTableView.swift in Sources */,
 				7BCE63E8285AFD7B005AAD24 /* AppDelegate.swift in Sources */,
 				7BCE63EA285AFD7B005AAD24 /* SceneDelegate.swift in Sources */,
-				7BCE6410285B0EFC005AAD24 /* NewTaskController.swift in Sources */,
+				7BCE6410285B0EFC005AAD24 /* DetailTaskController.swift in Sources */,
 				7BCE640C285B0023005AAD24 /* ToDoListItem+CoreDataClass.swift in Sources */,
 				7BCE640D285B0023005AAD24 /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				7BCE63F2285AFD7B005AAD24 /* ToDoList.xcdatamodeld in Sources */,

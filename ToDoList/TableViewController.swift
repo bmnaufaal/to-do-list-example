@@ -58,11 +58,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == "newTask" {
           // .. do somtheing
         } else if segue.identifier == "editTask" {
-            if let destination = segue.destination as? NewTaskController {
+            if let destination = segue.destination as? DetailTaskController {
                 destination.model = models[(tableView.indexPathForSelectedRow?.row)!]
             }
         }
-
     }
     
 //    Core Data

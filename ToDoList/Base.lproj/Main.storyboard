@@ -94,7 +94,7 @@
         <!--New Task-->
         <scene sceneID="AWl-6V-qxM">
             <objects>
-                <viewController id="wex-3B-VbN" customClass="NewTaskController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wex-3B-VbN" customClass="DetailTaskController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oya-9N-p9k">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,42 +147,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnj-5Z-9fO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1940" y="67.535545023696685"/>
-        </scene>
-        <!--Detail View Controller-->
-        <scene sceneID="Xhk-UU-vF8">
-            <objects>
-                <viewController id="MZ4-lK-0cH" customClass="DetailViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nCg-73-etf">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebB-Rn-n8l">
-                                <rect key="frame" x="16" y="140" width="358" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wwv-jh-yk2">
-                                <rect key="frame" x="16" y="194" width="358" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                            </textView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="HKM-D5-5DA"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="kdW-oF-yAg"/>
-                    <connections>
-                        <outlet property="descDetail" destination="Wwv-jh-yk2" id="AEq-5j-gl6"/>
-                        <outlet property="subtitleDetail" destination="ebB-Rn-n8l" id="5Rk-Aq-YIN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hge-SY-BH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2935.3846153846152" y="67.535545023696685"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

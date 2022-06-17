@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewTaskController: UIViewController {
+class DetailTaskController: UIViewController {
     
     var table = TableViewController()
     @IBOutlet weak var submitButton: UIButton!
@@ -34,14 +34,13 @@ class NewTaskController: UIViewController {
             // Present Alert to
             self.present(dialogMessage, animated: true, completion: nil)
         } else {
-            
-                if let modelA = model {
-                    table.updateItem(item: modelA, newTitle: titleField.text!, newSubTitle: subtitleField.text!, newDesc: descField.text!)
-                    navigationController?.popViewController(animated: true)
-                }else {
-                    table.createItem(title: titleField.text!, subtitle: subtitleField.text!, desc: descField.text!)
-                    navigationController?.popViewController(animated: true)
-                }
+            if let modelA = model {
+                table.updateItem(item: modelA, newTitle: titleField.text!, newSubTitle: subtitleField.text!, newDesc: descField.text!)
+                navigationController?.popViewController(animated: true)
+            }else {
+                table.createItem(title: titleField.text!, subtitle: subtitleField.text!, desc: descField.text!)
+                navigationController?.popViewController(animated: true)
+            }
         }
 
     }
@@ -55,10 +54,6 @@ class NewTaskController: UIViewController {
         }
         super.viewDidLoad()
         submitButton.layer.cornerRadius = 5
-       
-       
-        
-        // Do any additional setup after loading the view.
     }
     
 
